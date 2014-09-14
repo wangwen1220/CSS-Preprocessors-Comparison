@@ -1,6 +1,6 @@
 CSS-Preprocessors-Comparison
 ============================
 
- 这个repo包含了我对Less、Stylus、Sass三者的feature比较代码，以及相应的ppt.
- 
-<iframe src="//slides.com/abruzzihraig/deck/embed" width="860" height="627" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+这个repo包含了我对Less、Stylus、Sass三者的feature比较代码，以及相应的ppt.
+
+[![ScreenShot](https://raw.github.com/abruzzihraig/CSS-Preprocessors-Comparison/master/screenshot.png)](http://slides.com/abruzzihraig/deck)
