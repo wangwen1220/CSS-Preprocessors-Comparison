@@ -1,5 +1,39 @@
+// base variables
+$screenmin-green: #4ef161;
+$dark-jungle-green: #161f1f;
+$allports: #161f1f;
+$turquose: #3cf4ca;
+
+$link-color: #808080;
+$link-hover-color: darken($link-color, 20%);
 .foo {
     .bar {
-        padding: 20px;
+        color: $screenmin-green;
+        background-color: $dark-jungle-green;
+        a {
+            color: $link-color;
+            &:hover {
+                color: $link-hover-color;
+            }
+        }
     }
+}
+
+
+// variable interploation
+$class-name: nav;
+$class-name-expend: bar;
+.#{$class-name} {
+    color: $allports;
+}
+.#{$class-name}-#{$class-name-expend} {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+// variable urls
+$image-content-url: './Content/images';
+.foo {
+    background: url('#{$image-content-url}/background.png');
 }

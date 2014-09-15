@@ -1,30 +1,44 @@
+/* base variables */
 :root {
-  --green: #a6c776;
+    --screenmin-green: #4ef161;
+    --dark-jungle-green: #161f1f;
+    --allports: #161f1f;
+    --turquose: #3cf4ca;
+    --link-color: #808080;
+    --link-hover-color: color(var(--link-color) tint(20%));
 }
 
-@custom-media --narrow-window screen and (max-width: 30em);
-
-@media (--narrow-window) {
-  html {
-    font-size: 1.2rem;
-  }
+.foo .bar {
+    color: var(--screenmin-green);
+    background-color: var(--dark-jungle-green);
+}
+.foo .bar a {
+    color: var(--link-color);
+}
+.foo .bar a:hover {
+    color: (var(--link-color) tint(20%));
 }
 
-a {
-  color: var(--green);
-  font-variant: all-small-caps;
-  transition: color 1s;
+
+/* variable interploation 👿  failure */
+:root {
+    --class-name: nav;
+    --class-name-expend: bar;
+}
+.var(--class-name) {
+    color: var(--allports);
+}
+(.var(--class-name))-var(--class-name-expend) {
+    font-weight: bold;
+    text-decoration: none;
 }
 
-a:hover {
-  color: color(var(--green) shade(20%));
+
+/* variable urls 👿  failure */
+:root {
+    --image-content-url: './Content/images';
+}
+.foo {
+    background: url(var(--image-content-url)/background.png);
 }
 
-::placeholder {
-  opacity: .4;
-  transition: opacity 1s;
-}
-
-:focus::placeholder {
-  opacity: .2;
-}
