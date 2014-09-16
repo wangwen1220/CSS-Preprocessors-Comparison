@@ -12,15 +12,18 @@ CSS-Preprocessors-Comparison
 - [ ] [Mixin]()
 - [ ] [Extend]()
 - [ ] [Loop&Condition]()
-- [ ] [CSS3-Prefixs]()
+- [ ] [CSS3-Prefixes]()
 
 ## Init Step
-*首先请确保你有node环境*  
+*首先请确保你有node与ruby环境，并已安装compass gem*  
 
-运行`git branch`你可以看到待比较特性的所有分支  
-运行`git checkout <feature branch>`选择你想查看的特性分支  
-运行`npm install`安装gulp等相关库  
-在gulpfile所在目录，运行`gulp`，这会开启带有watch的编译task，随着你更换分支而自动编译更新`dist`目录下的所有css文件  
+1. 运行`git branch`，你可以看到待比较特性的所有分支  
+2. 运行`git checkout <feature branch>`选择你想查看的特性分支  
+3. 运行`npm install`安装gulp等相关库  
+4. 在gulpfile所在目录，运行`gulp`，这会开启带有watch的编译task，随着你更换分支而自动编译更新`dist`目录下的所有css文件  
+
+## Please Follow Me :pray:
+follow不到两位数，过年回家脸上无光啊 :joy:
 
 ## Liscense
 MIT
