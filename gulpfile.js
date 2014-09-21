@@ -4,26 +4,35 @@ var stylus = require('gulp-stylus');
 var less = require('gulp-less');
 var myth = require('gulp-myth');
 var watch = require('gulp-watch');
+var nib = require('nib');
 
 gulp.task('sass', function () {
-    watch('./origin/*.scss')
-    .pipe(sass())
-    .pipe(gulp.dest('./dist'));
+    gulp.src('./origin/*.scss')
+    .pipe(watch('./origin/*.scss', function(files) {
+        return files.pipe(sass())
+                .pipe(gulp.dest('./dist'));
+    }));
 });
 gulp.task('less', function () {
-    watch('./origin/*.less')
-    .pipe(less())
-    .pipe(gulp.dest('./dist'));
+    gulp.src('./origin/*.less')
+    .pipe(watch('./origin/*.less', function(files) {
+        return files.pipe(less())
+                .pipe(gulp.dest('./dist'));
+    }));
 });
 gulp.task('stylus', function () {
-    watch('./origin/*.styl')
-    .pipe(stylus())
-    .pipe(gulp.dest('./dist'));
+    gulp.src('./origin/*.styl')
+    .pipe(watch('./origin/*.styl', function(files) {
+        return files.pipe(stylus({use: [nib()]}))
+                .pipe(gulp.dest('./dist'));
+    }));
 });
 gulp.task('myth', function () {
-    watch('./origin/*.css')
-    .pipe(myth())
-    .pipe(gulp.dest('./dist'));
+    gulp.src('./origin/*.css')
+    .pipe(watch('./origin/*.css', function(files) {
+        return files.pipe(myth())
+                .pipe(gulp.dest('./dist'));
+    }));
 });
 
 gulp.task('default', ['sass', 'less', 'stylus', 'myth']);
