@@ -23,6 +23,7 @@
     "gulp-sass": "^0.7.3",
     "nib": "^1.0.3",
     "gulp-myth": "^1.0.1",
-    "gulp-watch": "^1.0.4"
+    "gulp-watch": "^1.0.4",
+    "lesshat": "^3.0.2"
   }
 }
