@@ -1,36 +1,20 @@
-@import '../node_modules/nib'
+@import 'nib'
+.foo
+     border-radius(5px)
+.bar
+     border-radius(20px / 40px)
+.tmp
+     transition(box-shadow 0.2s linear, color .4s .2s ease)
+span
+     opacity(0.5)
 
-$footer-color = #b0b0b0
-$copyright-color = #eee
-
-// logo
-#logo {
-  image: '/images/logo.png'
-}
-#logo {
-  image: '/images/logo.png' 50px 100px
-}
-
-// sink footer
-#sink-footer
-    padding-bottom 262px
-    clearfix()
-    .sink-text
-        overflow ellipsis
-
-// footer
-#footer-wrapper
-    absolute bottom 0 left 0
-    width 100%
-    footer
-        padding 0 20px
-        min-height 80px
-        background $footer-color
-        box-shadow(0 0 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.35))
-        box-sizing(border-box)
-        &.fixed-to-bottom
-            absolute bottom 0 left 0
-        .copyright
-            margin 32px 0 0
-            a
-                color $copyright-color
+$keyframe-name = HY
+@keyframes {$keyframe-name}
+    0%
+        transform scale(1.5)
+        color blue
+    100%
+        transform scale(2)
+        color red
+p
+    animation(HY)

@@ -1,11 +1,26 @@
 @import "compass";
 .foo {
-    @include clearfix;
-    .bar {
-        padding: 20px;
-        width: 300px;
-    }
+    @include border-radius(5px);
+}
+.bar {
+    @include border-radius(20px / 40px);
 }
 .tmp {
-    width: 50px;
+    @include transition(box-shadow 0.2s linear, color .4s .2s ease);
+}
+span {
+    @include opacity(0.5);
+}
+@include keyframes(HY) {
+    0% {
+        @include transform(scale(1.5));
+        color: blue;
+    }
+    50% {
+        @include transform(scale(2));
+        color: red;
+    }
+}
+p {
+    @include animation(HY);
 }
