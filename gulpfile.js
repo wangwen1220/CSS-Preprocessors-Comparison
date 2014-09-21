@@ -4,12 +4,18 @@ var stylus = require('gulp-stylus');
 var less = require('gulp-less');
 var myth = require('gulp-myth');
 var watch = require('gulp-watch');
+var compass = require('gulp-compass');
 var nib = require('nib');
+var path = require('path');
 
 gulp.task('sass', function () {
     gulp.src('./origin/*.scss')
     .pipe(watch('./origin/*.scss', function(files) {
-        return files.pipe(sass())
+        return files.pipe(compass({
+                    project: path.join(__dirname),
+                    css: 'dist',
+                    sass: 'origin'
+                }))
                 .pipe(gulp.dest('./dist'));
     }));
 });
