@@ -3,3 +3,4 @@ dist
 *.swo
 *.swp
 css
+.sass-cache
