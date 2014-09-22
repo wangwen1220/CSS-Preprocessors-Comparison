@@ -1,5 +1,30 @@
-.foo {
-    .bar {
-        padding: 20px;
-    }
+// loop (recursion) 👿
+.generate-columns(4);
+
+.generate-columns(@n, @i: 1) when (@i =< @n) {
+  .column-@{i} {
+    width: (@i*100%/@n);
+  }
+  .generate-columns(@n, (@i+1));
 }
+
+// loop (for) 不支持
+// loop (each) 不支持
+// loop (while) 不支持
+
+// condition (guarded mixins) 👿
+.contrast(@color) when (lightness(@color) >= 50%) {
+    background-color: black:
+;
+}
+.contrast(@color) when (lightness(@color) < 50%) {
+    background-color: white;
+}
+.contrast (@color) {
+  color: @color;
+}
+
+.foo { .contrast(#ddd); }
+.bar { .contrast(#555); }
+
+// condition (if else) 不支持

@@ -1,36 +1,25 @@
-@import '../node_modules/nib'
+// loop (for)
+for i in 1..4
+    .column-{i}
+        width (i*100/4)%
 
-$footer-color = #b0b0b0
-$copyright-color = #eee
+// loop (each)
+arr = 1 2 3 4
+for i in arr
+    .column-{i}
+        width (i*100/4)%
 
-// logo
-#logo {
-  image: '/images/logo.png'
-}
-#logo {
-  image: '/images/logo.png' 50px 100px
-}
+// loop (while) 不支持
 
-// sink footer
-#sink-footer
-    padding-bottom 262px
-    clearfix()
-    .sink-text
-        overflow ellipsis
+// condition (if else)
+contrast(color)
+    color color
+    if lightness(color) >= 50%
+        background-color black
+    else
+        background-color white
 
-// footer
-#footer-wrapper
-    absolute bottom 0 left 0
-    width 100%
-    footer
-        padding 0 20px
-        min-height 80px
-        background $footer-color
-        box-shadow(0 0 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.35))
-        box-sizing(border-box)
-        &.fixed-to-bottom
-            absolute bottom 0 left 0
-        .copyright
-            margin 32px 0 0
-            a
-                color $copyright-color
+.foo
+    contrast(#ddd)
+.bar
+    contrast(#555)
