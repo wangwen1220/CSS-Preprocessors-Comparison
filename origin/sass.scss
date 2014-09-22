@@ -1,8 +1,64 @@
-@import "compass";
-.foo {
-    @include clearfix;
-    .bar {
-        padding: 20px;
-        width: 300px;
-    }
+// base mixin include 不支持 👿
+@mixin a {
+    color: #333;
+}
+.b {
+    @include a;
+}
+
+// 不输出mixin本身
+@mixin c {
+    font-size: 12px;
+}
+.d {
+    @include c;
+}
+
+// mixin function
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+.e {
+    @include border-radius(10px);
+}
+
+// mixin function 参数默认值&多参数
+@mixin transition($time: 0.5s, $action: ease, $scope: all) {
+    -webkit-transition: $time $action $scope;
+    -moz-transition: $time $action $scope;
+    transition: $time $action $scope;
+}
+.f {
+    @include transition();
+}
+
+// mixin function arguments 👿
+@mixin box-shadow($shadows...) {
+    -webkit-box-shadow: $shadows;
+    -moz-box-shadow: $shadows;
+    box-shadow: $shadows;
+}
+.g {
+    @include box-shadow(0 0 1px #000);
+}
+
+// mixin function 运算 ❤️
+@function average($x, $y) {
+    @return (($x + $y) / 2);
+}
+.i {
+    padding: average(18px, 28px);
+}
+
+// mixin scope
+$color: white;
+@mixin j($color: blue) {
+  background-color: $color;
+  @content;
+  border-color: $color;
+}
+.k {
+  @include j { color: $color; }
 }

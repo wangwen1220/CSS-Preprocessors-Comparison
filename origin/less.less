@@ -1,5 +1,58 @@
-.foo {
-    .bar {
-        padding: 20px;
-    }
+// base mixin inlude
+.a {
+    color: #333;
 }
+.b {
+    .a();
+}
+
+// 不输出mixin本身
+.c() {
+    font-size: 12px;
+}
+.d {
+    .c();
+}
+
+// mixin function
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+.e {
+    .border-radius(5px)
+}
+
+// mixin function 参数默认值&多参数
+.transition(@time: 0.5s; @action: ease; @scope: all) {
+    -webkit-transition: @time @action @scope;
+    -moz-transition: @time @action @scope;
+    transition: @time @action @scope;
+}
+.f {
+    .transition();
+}
+
+// mixin function arguments 👿
+.box-shadow(@x: 0; @y: 0; @blur: 1px; @color: #000) {
+    -webkit-box-shadow: @arguments;
+    -moz-box-shadow: @arguments;
+    box-shadow: @arguments;
+}
+.g {
+    .box-shadow(2px; 5px);
+}
+
+// mixin function 运算 👿
+.average(@x, @y) {
+    @average: ((@x + @y) / 2);
+}
+.i {
+    .average(18px, 28px);
+    padding: @average;
+}
+
+// mixin scope 不支持
+
+// Less的mixin很不纯粹，既含有mixin function的含义，又拥有mixin structure的能力
