@@ -1,36 +1,41 @@
-@import '../node_modules/nib'
+/* base extend 编译出extend对象 */
+.a
+    color #333
+.b
+    @extend .a
+    font-size 12px
 
-$footer-color = #b0b0b0
-$copyright-color = #eee
+/* extend placeholder selectors ❤️  */
+$outer
+    color #888
+.inner
+    @extend $outer
+    text-decoration none
 
-// logo
-#logo {
-  image: '/images/logo.png'
-}
-#logo {
-  image: '/images/logo.png' 50px 100px
-}
+/* cascade extend */
+form
+    button
+        color #000
+textarea
+    @extend form button
+    position relative
 
-// sink footer
-#sink-footer
-    padding-bottom 262px
-    clearfix()
-    .sink-text
-        overflow ellipsis
-
-// footer
-#footer-wrapper
-    absolute bottom 0 left 0
+/* extend multiple selectors */
+.c
+    color #444
+.d
+    border 1px solid #000
+.e
     width 100%
-    footer
-        padding 0 20px
-        min-height 80px
-        background $footer-color
-        box-shadow(0 0 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.35))
-        box-sizing(border-box)
-        &.fixed-to-bottom
-            absolute bottom 0 left 0
-        .copyright
-            margin 32px 0 0
-            a
-                color $copyright-color
+    @extend .c, .d
+
+/* complex extend */
+.message
+    width 100%
+.warning
+    color purple
+    height 50px
+    @extend .message
+.error
+    color red
+    @extend .warning

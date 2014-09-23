@@ -1,8 +1,45 @@
-@import "compass";
-.foo {
-    @include clearfix;
-    .bar {
-        padding: 20px;
-        width: 300px;
-    }
+/* base extend 编译出extend对象 */
+.a {
+    color: #333;
+}
+.b {
+    @extend .a;
+    font-size: 12px;
+}
+
+/* extend placeholder selectors */
+.outer %extreme {
+    color: #888;
+}
+.inner {
+    @extend %extreme;
+    text-decoration: none;
+}
+
+/* cascade extend(不支持,唯一不同于stylus之处) 👿  */
+
+/* extend multiple selectors */
+.c {
+    color: #444;
+}
+.d {
+    border: 1px solid #000;
+}
+.e {
+    width: 100%;
+    @extend .c, .d;
+}
+
+/* complex extend */
+.message {
+    width: 100%;
+}
+.warning {
+    color: purple;
+    height: 50px;
+    @extend .message;
+}
+.error {
+    color: red;
+    @extend .warning;
 }

@@ -1,5 +1,53 @@
-.foo {
-    .bar {
-        padding: 20px;
+/* base extend (Less伪类) 编译出extend对象 */
+.a {
+    color: #333;
+}
+.b {
+    &:extend(.a);
+    font-size: 12px;
+}
+
+/* extend placeholder selectors(不支持)👿  */
+
+/* cascade extend */
+form {
+    button {
+        color: #000;
     }
 }
+textarea:extend(form button){
+    position: relative;
+}
+
+/* extend multiple selectors ❤️  */
+.c {
+    color: #444;
+}
+.d {
+    border: 1px solid #000;
+}
+.e:extend(.c, .d) {
+    width: 100%;
+}
+
+/* complex extend */
+.message {
+    width: 100%;
+}
+.warning:extend(.message) {
+    color: purple;
+    height: 50px;
+}
+.error:extend(.warning) {
+    color: red;
+}
+
+/* extend all replacement */
+.foo.bar.test,
+.test.tmp {
+    color: red;
+}
+.replace:extend(.test all) {
+    height: 100px;
+}
+// 我真的不知道Less设计者在想什么🙊
