@@ -1,4 +1,4 @@
-// base mixin inlude
+/* base mixin inlude */
 .a {
     color: #333;
 }
@@ -6,7 +6,7 @@
     .a();
 }
 
-// 不输出mixin本身
+/* 不输出mixin本身 */
 .c() {
     font-size: 12px;
 }
@@ -14,7 +14,7 @@
     .c();
 }
 
-// mixin function
+/* mixin function */
 .border-radius(@radius) {
     -webkit-border-radius: @radius;
     -moz-border-radius: @radius;
@@ -24,7 +24,7 @@
     .border-radius(5px)
 }
 
-// mixin function 参数默认值&多参数
+/* mixin function 参数默认值&多参数 */
 .transition(@time: 0.5s; @action: ease; @scope: all) {
     -webkit-transition: @time @action @scope;
     -moz-transition: @time @action @scope;
@@ -44,7 +44,7 @@
     .box-shadow(2px; 5px);
 }
 
-// mixin function 运算 👿
+/* mixin function 运算 👿  */
 .average(@x, @y) {
     @average: ((@x + @y) / 2);
 }

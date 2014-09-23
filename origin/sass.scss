@@ -1,4 +1,4 @@
-// base mixin include 不支持 👿
+/* base mixin include 不支持 👿  */
 @mixin a {
     color: #333;
 }
@@ -6,7 +6,7 @@
     @include a;
 }
 
-// 不输出mixin本身
+/* 不输出mixin本身 */
 @mixin c {
     font-size: 12px;
 }
@@ -14,7 +14,7 @@
     @include c;
 }
 
-// mixin function
+/* mixin function */
 @mixin border-radius($radius) {
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
@@ -24,7 +24,7 @@
     @include border-radius(10px);
 }
 
-// mixin function 参数默认值&多参数
+/* mixin function 参数默认值&多参数 */
 @mixin transition($time: 0.5s, $action: ease, $scope: all) {
     -webkit-transition: $time $action $scope;
     -moz-transition: $time $action $scope;
@@ -34,7 +34,7 @@
     @include transition();
 }
 
-// mixin function arguments 👿
+/* mixin function arguments 👿  */
 @mixin box-shadow($shadows...) {
     -webkit-box-shadow: $shadows;
     -moz-box-shadow: $shadows;
@@ -44,7 +44,7 @@
     @include box-shadow(0 0 1px #000);
 }
 
-// mixin function 运算 ❤️
+/* mixin function 运算 ❤️  */
 @function average($x, $y) {
     @return (($x + $y) / 2);
 }
@@ -52,7 +52,7 @@
     padding: average(18px, 28px);
 }
 
-// mixin scope
+/* mixin scope */
 $color: white;
 @mixin j($color: blue) {
   background-color: $color;
