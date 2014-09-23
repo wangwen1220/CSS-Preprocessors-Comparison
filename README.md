@@ -12,7 +12,7 @@ CSS-Preprocessors-Comparison
 - [ ] [Operation]()
 - [ ] [Built-in Function]()
 - [x] [Mixin](https://github.com/abruzzihraig/CSS-Preprocessors-Comparison/tree/mixin/origin)
-- [ ] [Extend]()
+- [x] [Extend]()
 - [x] [Loop&Condition](https://github.com/abruzzihraig/CSS-Preprocessors-Comparison/tree/loop_condition/origin)
 - [x] [CSS3-Prefixes](https://github.com/abruzzihraig/CSS-Preprocessors-Comparison/tree/prefix/origin)
 
