@@ -1,21 +1,21 @@
-// loop (for)
+/* loop (for) */
 @for $i from 1 through 4 {
   .column-#{$i} { width: $i*100%/4; }
 }
 
-// loop (each)
+/* loop (each) */
 @each $i in 1, 2, 3, 4 {
   .column-#{$i} { width: $i*100%/4; }
 }
 
-// loop (while)
+/* loop (while) */
 $i: 1;
 @while $i < 5 {
   .column-#{$i} { width: $i*100%/4; }
   $i: $i + 1;
 }
 
-// condition (if else)
+/* condition (if else) */
 @mixin contrast($color) {
     color: $color;
     @if lightness($color) >= 50% {

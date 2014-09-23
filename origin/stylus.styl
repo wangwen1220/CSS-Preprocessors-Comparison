@@ -1,17 +1,17 @@
-// loop (for)
+/* loop (for) */
 for i in 1..4
     .column-{i}
         width (i*100/4)%
 
-// loop (each)
+/* loop (each) */
 arr = 1 2 3 4
 for i in arr
     .column-{i}
         width (i*100/4)%
 
-// loop (while) 不支持
+/* loop (while) 不支持 */
 
-// condition (if else)
+/* condition (if else) */
 contrast(color)
     color color
     if lightness(color) >= 50%

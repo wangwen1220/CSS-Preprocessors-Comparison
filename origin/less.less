@@ -1,4 +1,4 @@
-// loop (recursion) 👿
+/* loop (recursion) 👿  */
 .generate-columns(4);
 
 .generate-columns(@n, @i: 1) when (@i =< @n) {
@@ -8,11 +8,11 @@
   .generate-columns(@n, (@i+1));
 }
 
-// loop (for) 不支持
-// loop (each) 不支持
-// loop (while) 不支持
+/* loop (for) 不支持 */
+/* loop (each) 不支持 */
+/* loop (while) 不支持 */
 
-// condition (guarded mixins) 👿
+/* condition (guarded mixins) 👿  */
 .contrast(@color) when (lightness(@color) >= 50%) {
     background-color: black:
 ;
@@ -27,4 +27,4 @@
 .foo { .contrast(#ddd); }
 .bar { .contrast(#555); }
 
-// condition (if else) 不支持
+/* condition (if else) 不支持 */
