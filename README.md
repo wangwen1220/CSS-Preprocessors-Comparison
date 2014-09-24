@@ -9,7 +9,7 @@ CSS-Preprocessors-Comparison
 
 ## Feature Comparision TODO 
 - [x] [Variable](https://github.com/abruzzihraig/CSS-Preprocessors-Comparison/tree/variable/origin)
-- [ ] [Operation]()
+- [x] [Operation]()
 - [ ] [Built-in Function]()
 - [x] [Mixin](https://github.com/abruzzihraig/CSS-Preprocessors-Comparison/tree/mixin/origin)
 - [x] [Extend]()
