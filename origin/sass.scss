@@ -1,5 +1,77 @@
-.foo {
-    .bar {
-        padding: 20px;
-    }
+/* operators precedence 运算符优先级*/
+// 我不知道别问我
+
+/* unary operators 一元操作符 未知*/
+/* boolean operators */
+// SassScript supports and, or, and not operators for boolean values.
+
+/* logical operation 逻辑操作符 未知*/
+
+
+/* + - * / % */
+15px - 5px // => 10px
+5 - 2 // => 3
+"foo " + "bar" // => "foo bar"
+"num " + 15 // => "num 15"
+5s / 2 // => 2.5s
+4 % 2 // => 0
+
+
+/* list ❌  */
+length($list)
+nth($list, $n)
+join($list1, $list2, [$separator])
+append($list1, $val, [$separator])
+zip($lists…)
+index($list, $value)
+list-separator(#list)
+
+/* range ❌  */
+
+/* hashes (map) ❌  */
+$map: (foo: #333, key2: #666);
+a {
+    map-get($map, foo);
 }
+
+/* hashes extend ❌  */
+$map1: (
+  foo: tmp1
+  bar: tmp2
+)
+$map2: (
+  baz: tmp3
+)
+map-get($map1, foo) // => tmp1
+map-keys($map1) // => foo, bar
+map-values($map1) // => tmp1, tmp2
+map-has-key($map1, foo) // => true
+map-merge($map1, $map2) // => (foo: tmp1, bar: tmp2, baz: tmp3)
+map-remove($map1, foo, bar) // => ()
+
+/* in operator */
+map-has-key($map1, foo) // => true
+
+/* instance check 'is a' ❌  */
+
+/* variable definition ❌  */
+
+/* conditional assignment ❌  */
+
+/* ternary expression ❌  */
+
+/* exponent ❌  */
+
+/* color operation color() */
+.p1 {
+    color: #0e0 + #0e0; // => #0f0
+}
+.p2 {
+    color: #010203 * 2; // => #020406
+}
+.p3 {
+    color: rgba(255, 0, 0, 0.75) + rgba(0, 255, 0, 0.75); // => rgba(255, 255, 0, 0.75)
+}
+
+
+/* sprintf ❌  */

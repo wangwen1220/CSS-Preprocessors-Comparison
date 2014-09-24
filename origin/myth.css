@@ -1,30 +1,49 @@
-:root {
-  --green: #a6c776;
-}
+/* operators precedence 运算符优先级*/
+/* 这个我不知道别问我 */
 
-@custom-media --narrow-window screen and (max-width: 30em);
+/* unary operators 一元操作符 未知*/
 
-@media (--narrow-window) {
-  html {
-    font-size: 1.2rem;
-  }
-}
+/* logical operation 逻辑操作符 未知*/
 
+/* + - * / % */
+/* 15px + 5px */
+/* cal(15px + 5px)=> cal(20px) */
+/* 15px - 5em */
+/* cal(15px - 5px)=> cal(10px - 5em) */
+/* 15px * 2 */
+/* => 30px */
+/* 5s / 2 */
+/* => 2.5s */
+/* 4 % 2 */
+/* => 0 */
+
+/* list ❌  */
+
+/* range ❌  */
+
+/* hashes ❌  */
+
+/* hashes extend ❌  */
+
+/* in operator ❌  */
+
+/* instance check 'is a' ❌  */
+
+/* variable definition ❌  */
+
+/* conditional assignment ❌  */
+
+/* ternary expression ❌  */
+
+/* exponent ❌  */
+
+/* color operation color() 👿  */
 a {
-  color: var(--green);
-  font-variant: all-small-caps;
-  transition: color 1s;
+    color: #847AD1;
 }
-
 a:hover {
-  color: color(var(--green) shade(20%));
+    color: color(#847AD1 tint(20%));
+    background-color: color(green shade(20%));
 }
 
-::placeholder {
-  opacity: .4;
-  transition: opacity 1s;
-}
-
-:focus::placeholder {
-  opacity: .2;
-}
+/* sprintf ❌  */
