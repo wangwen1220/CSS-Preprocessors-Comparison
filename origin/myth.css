@@ -1,0 +1,7 @@
+/* filter functions */
+.foo {
+    color: color(red hue(+ 29));
+}
+.bar {
+    color: color(var(green) tint(10%));
+}

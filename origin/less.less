@@ -1,0 +1,57 @@
+/* color functions */
+
+
+/* hsl functions */
+
+
+/* opacity functions */
+
+
+/* string functions */
+escape('a=1') // => a%3D1
+format-a-d: %("repetitions: %a file: %d", 1 + 2, "directory/file.less");
+// => format-a-d: "repetitions: 3 file: "directory/file.less"";
+replace("Hello, Mars?", "Mars\?", "Earth!"); // => "Hello, Earth!";
+
+
+/* math functions ❤️  */
+percentage($number)
+round($number)
+ceil($number)
+floor($number)
+abs($number)
+min($numbers…)
+max($numbers…)
+random([$limit])
+pow(25, 0.5) // => 5
+mod(11cm, 6px) // => 5cm
+sqrt(25cm) // => 5cm
+sin()
+tan()
+cos()
+asin()
+acos()
+atan()
+pi
+
+
+/* list functions */
+@list: "banana", "tomato", "potato", "peach";
+n: length(@list); // => 4
+@list: apple, pear, coconut, orange;
+value: extract(@list, 3);
+
+
+/* introspection functions */
+isnumber(#ff0);     // false
+isstring(#ff0);     // false
+iscolor(#ff0);     // true
+iskeyword(keyword);  // true
+isurl(url(...)); // true
+ispixel(56px);     // true
+isem(7.8em);    // true
+ispercentage(7.8%);     // true
+isunit(4rem, rem); // true
+
+
+/* plugin not support */

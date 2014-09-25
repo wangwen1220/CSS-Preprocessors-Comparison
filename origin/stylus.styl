@@ -11,24 +11,69 @@ hue(hsla(50deg, 100%, 80%)) // => 50deg
 hue(#00c, 90deg) // => #6c0
 
 
+/* hsl function */
+blend(rgba(#FFF, 0.5), #000) // => #808080
+lighten(#2c2c2c, 30%) // => #393939
+darken(#D62828, 30) // => #551010
+nvert(#d62828) // => #29d7d7
+grayscale(#fd0cc7) // => #0cfd42
+tint(#fd0cc7,66%) // => #feaceb
+shade(#fd0cc7,66%) // => #560443
+transparentify(#808080) // => rgba(0,0,0,0.5) ❤️
+contrast(#000, #fff).ratio // => 21 ❤️
+
+
+/* opacity funcitons */
+
+
+/* string functions */
+
+
+/* math functions */
+
+
+/* list functions */
+nums = 1 2
+push(nums, 3, 4, 5)
+nums // => 1 2 3 4 5
+
+nums = 4 5
+unshift(nums, 3, 2, 1)
+nums // => 1 2 3 4 5
+
+list2 = a, b, c
+list-separator(list2) // => ','
+
+join(',', 1 2 3) // => "1,2,3"
+
+/* map functions */
+pairs = (one 1) (two 2) (three 3)
+keys(pairs) // => one two three
+
+pairs = (one 1) (two 2) (three 3)
+values(pairs) // => 1 2 3
+
+
+typeof(#fff) // => 'rgba'
+type(12) // => 'unit'
+
 unit(10) // => ''
 unit(15in) // => 'in'
 unit(15%, px) // => 15px
 
-/* math functions */
-abs(-5px) // => 5px
-ceil(5.5in) // => 6in
-floor(5.6px) // => 5px
-round(5.4px) // => 5px
-ceil(5.52px,1) // => 5.6px
-floor(5.57px,1) // => 5.5px
-round(5.52px,1) // => 5.5px
-sin(3*PI/4) // => 0.707106781
-cos(180deg) // => -1
-tan(90deg) // => Infinity
-min(1, 5) // => 1
-max(1, 5) // => 5
-even(6px) // => true
-odd(5mm) // => true
-sum(1 2 3) // => 6
-avg(1 2 3) // => 2
+
+/* introspection functions */
+
+
+/* plugin */
+use("plugins/add.js")
+width add(10, 100) // => width: 110
+
+// var plugin = function(){
+//   return function(style){
+//     style.define('add', function(a, b) {
+//       return a.operate('+', b);
+//     });
+//   };
+// };
+// module.exports = plugin;
