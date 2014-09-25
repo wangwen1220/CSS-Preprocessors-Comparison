@@ -1,36 +1,34 @@
-@import '../node_modules/nib'
+/* color functions */
+red(#c00) // => 204
+red(#000, 255) // => #f00
+alpha(#fff) // => 1
+alpha(rgba(0,0,0,0.3)) // => 0.3
+dark(#005716) // => true
+dark(white) // => false
+light(white) // => true
+light(#00FF40) // => true
+hue(hsla(50deg, 100%, 80%)) // => 50deg
+hue(#00c, 90deg) // => #6c0
 
-$footer-color = #b0b0b0
-$copyright-color = #eee
 
-// logo
-#logo {
-  image: '/images/logo.png'
-}
-#logo {
-  image: '/images/logo.png' 50px 100px
-}
+unit(10) // => ''
+unit(15in) // => 'in'
+unit(15%, px) // => 15px
 
-// sink footer
-#sink-footer
-    padding-bottom 262px
-    clearfix()
-    .sink-text
-        overflow ellipsis
-
-// footer
-#footer-wrapper
-    absolute bottom 0 left 0
-    width 100%
-    footer
-        padding 0 20px
-        min-height 80px
-        background $footer-color
-        box-shadow(0 0 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.35))
-        box-sizing(border-box)
-        &.fixed-to-bottom
-            absolute bottom 0 left 0
-        .copyright
-            margin 32px 0 0
-            a
-                color $copyright-color
+/* math functions */
+abs(-5px) // => 5px
+ceil(5.5in) // => 6in
+floor(5.6px) // => 5px
+round(5.4px) // => 5px
+ceil(5.52px,1) // => 5.6px
+floor(5.57px,1) // => 5.5px
+round(5.52px,1) // => 5.5px
+sin(3*PI/4) // => 0.707106781
+cos(180deg) // => -1
+tan(90deg) // => Infinity
+min(1, 5) // => 1
+max(1, 5) // => 5
+even(6px) // => true
+odd(5mm) // => true
+sum(1 2 3) // => 6
+avg(1 2 3) // => 2
