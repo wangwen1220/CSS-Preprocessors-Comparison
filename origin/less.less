@@ -1,20 +1,65 @@
-/* color functions */
+/* color functions ❤️
+color("#aaa"); // => #aaa
+rgba(@red, @green, @blue, @alpha)
+argb(@color)
+*/
 
 
-/* hsl functions */
+/* hsl functions ❤️
+hsl(@hue, @saturation, @lightness)
+hsla(@hue, @saturation, @lightness)
+hsv(@hue, @saturation, @lightness)
+hsva(@hue, @saturation, @value, @alpha)
+hue(@color)
+saturation(@color)
+lightness(@color)
+hsvhue(@color)
+hsvsaturation(@color)
+hsvlightness(@color)
+red(@color)
+luma(@color)
+luminance(@color)
+saturate(@color, @amount)
+dessaturate(@color, @amount)
+lighten(@color, @amount)
+darken(@color, @amount)
+fadein(@color, @amount)
+fadeout(@color, @amount)
+fade(@color, @amount)
+spin(@color, @amount)
+mix(@color1, @color2, [@weight: 50%])
+grayscale(@color)
+contrast(@background, [@darkcolor: black], [@lightcolor: white], [@threshold: 43%]) ❤️
+multiply(@color1, @color2)
+screen(@color1, @color2)
+overlay(@color1, @color2)
+softlight(@color1, @color2)
+hardlight(@color1, @color2)
+difference(@color1, @color2)
+exclusion(@color1, @color2)
+average(@color1, @color2)
+negation(@color1, @color2)
+*/
 
 
-/* opacity functions */
+/* opacity functions
+alpha(@color)
+*/
 
 
-/* string functions */
+/* 上面3条说明less是设计师利器🙊  */
+
+
+
+/* string functions
 escape('a=1') // => a%3D1
 format-a-d: %("repetitions: %a file: %d", 1 + 2, "directory/file.less");
 // => format-a-d: "repetitions: 3 file: "directory/file.less"";
 replace("Hello, Mars?", "Mars\?", "Earth!"); // => "Hello, Earth!";
+*/
 
 
-/* math functions ❤️  */
+/* math functions ❤️
 percentage($number)
 round($number)
 ceil($number)
@@ -33,16 +78,18 @@ asin()
 acos()
 atan()
 pi
+*/
 
 
-/* list functions */
+/* list functions
 @list: "banana", "tomato", "potato", "peach";
 n: length(@list); // => 4
 @list: apple, pear, coconut, orange;
 value: extract(@list, 3);
+*/
 
 
-/* introspection functions */
+/* introspection functions
 isnumber(#ff0);     // false
 isstring(#ff0);     // false
 iscolor(#ff0);     // true
@@ -52,6 +99,7 @@ ispixel(56px);     // true
 isem(7.8em);    // true
 ispercentage(7.8%);     // true
 isunit(4rem, rem); // true
+*/
 
 
 /* plugin not support */

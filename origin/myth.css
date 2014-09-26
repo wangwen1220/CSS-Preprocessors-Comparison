@@ -3,5 +3,5 @@
     color: color(red hue(+ 29));
 }
 .bar {
-    color: color(var(green) tint(10%));
+    color: color(green tint(10%));
 }

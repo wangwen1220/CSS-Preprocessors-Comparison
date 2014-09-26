@@ -1,17 +1,20 @@
-/* color functions */
+/* color functions
 red(#c00) // => 204
 red(#000, 255) // => #f00
-alpha(#fff) // => 1
-alpha(rgba(0,0,0,0.3)) // => 0.3
+rgb(255,204,0) // => #ffcc00
+rgba(#ffcc00, 0.5) // rgba(255,204,0,0.5)
+*/
+
+
+/* hsl function
+hue(hsla(50deg, 100%, 80%)) // => 50deg
+hue(#00c, 90deg) // => #6c0
 dark(#005716) // => true
 dark(white) // => false
 light(white) // => true
 light(#00FF40) // => true
-hue(hsla(50deg, 100%, 80%)) // => 50deg
-hue(#00c, 90deg) // => #6c0
-
-
-/* hsl function */
+hslaa(10deg, 50%, 30%, 0.5) // => HSLA
+hsla(10, 50, 30) // => HSLA
 blend(rgba(#FFF, 0.5), #000) // => #808080
 lighten(#2c2c2c, 30%) // => #393939
 darken(#D62828, 30) // => #551010
@@ -21,18 +24,38 @@ tint(#fd0cc7,66%) // => #feaceb
 shade(#fd0cc7,66%) // => #560443
 transparentify(#808080) // => rgba(0,0,0,0.5) ❤️
 contrast(#000, #fff).ratio // => 21 ❤️
+*/
 
 
-/* opacity funcitons */
+/* opacity funcitons
+alpha(#fff) // => 1
+alpha(rgba(0,0,0,0.3)) // => 0.3
+*/
 
 
-/* string functions */
+/* string functions
+match('^foo(bar)?', 'bar') // => false
+s('bar(%s)', 15px); // => bar(15px)
+*/
 
 
-/* math functions */
+/* math functions
+abs(-5px) // => 5px
+ceil(5.5in) // => 6in
+floor(5.6px) // => 5px
+round(5.5px) // => 6px
+sin(3*PI/4) // => 0.707106781
+cos(180deg) // => -1
+tan(90deg) // => Infinity
+min(1, 5) // => 1
+max(1, 5) // => 5
+even(6px) // => true
+odd(5mm) // => true
+sum(1 2 3) // => 6
+avg(1 2 3) // => 2
+*/
 
-
-/* list functions */
+/* list functions
 nums = 1 2
 push(nums, 3, 4, 5)
 nums // => 1 2 3 4 5
@@ -45,35 +68,38 @@ list2 = a, b, c
 list-separator(list2) // => ','
 
 join(',', 1 2 3) // => "1,2,3"
+*/
 
-/* map functions */
+
+/* map functions
 pairs = (one 1) (two 2) (three 3)
 keys(pairs) // => one two three
 
 pairs = (one 1) (two 2) (three 3)
 values(pairs) // => 1 2 3
+*/
 
 
+/* introspection functions
 typeof(#fff) // => 'rgba'
 type(12) // => 'unit'
 
 unit(10) // => ''
 unit(15in) // => 'in'
 unit(15%, px) // => 15px
+*/
 
 
-/* introspection functions */
-
-
-/* plugin */
+/* plugin ❤️
 use("plugins/add.js")
 width add(10, 100) // => width: 110
 
-// var plugin = function(){
-//   return function(style){
-//     style.define('add', function(a, b) {
-//       return a.operate('+', b);
-//     });
-//   };
-// };
-// module.exports = plugin;
+var plugin = function(){
+  return function(style){
+    style.define('add', function(a, b) {
+      return a.operate('+', b);
+    });
+  };
+};
+module.exports = plugin;
+*/

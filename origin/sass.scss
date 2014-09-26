@@ -1,13 +1,14 @@
-/* color functions */
+/* color functions
 rgb($red, $green, $blue)
 rgba($red, $green, $blue, $alpha)
 red($color)
 green($color)
 blue($color)
 mix($color1, $color2, [$weight])
+*/
 
 
-/* hsl functions */
+/* hsl functions
 hsl($hue, $saturation, $lightness)
 hsla($hue, $saturation, $lightness, $alpha)
 hue($color)
@@ -20,16 +21,18 @@ saturate($color, $amount)
 desaturate($color, $amount)
 grayscale($color)
 complement($color)
+*/
 
 
-/* opacity functions */
+/* opacity functions
 alpha($color) / opacity($color)
 rgba($color, $alpha)
 opacify($color, $amount) / fade-in($color, $amount)
 transparentize($color, $amount) / fade-out($color, $amount)
+*/
 
 
-/* string functions */
+/* string functions
 unquote($string)
 quote($string)
 str-length($string)
@@ -38,9 +41,10 @@ str-index($string, $substring)
 str-slice($string, $start-at, [$end-at])
 to-upper-case($string)
 to-lower-case($string)
+*/
 
 
-/* math functions */
+/* math functions
 percentage($number)
 round($number)
 ceil($number)
@@ -49,9 +53,10 @@ abs($number)
 min($numbers…)
 max($numbers…)
 random([$limit])
+*/
 
 
-/* list functions */
+/* list functions
 length($list)
 nth($list, $n)
 join($list1, $list2, [$separator])
@@ -60,9 +65,10 @@ append($list1, $val, [$separator])
 zip($lists…)
 index($list, $value)
 list-separator(#list)
+*/
 
 
-/* introspection functions */
+/* introspection functions
 feature-exists($feature)
 variable-exists($name)
 global-variable-exists($name)
@@ -74,13 +80,15 @@ unit($number)
 unitless($number)
 comparable($number1, $number2)
 call($name, $args…)
+*/
 
 
-/* plugin function */
-// module Sass::Script::Functions
-//   def reverse(string)
-//     assert_type string, :String
-//     Sass::Script::Value::String.new(string.value.reverse)
-//   end
-//   declare :reverse, [:string]
-// end
+/* plugin function ❤️
+module Sass::Script::Functions
+  def reverse(string)
+    assert_type string, :String
+    Sass::Script::Value::String.new(string.value.reverse)
+  end
+  declare :reverse, [:string]
+end
+*/
