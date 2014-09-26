@@ -8,16 +8,17 @@
 /* logical operation 逻辑操作符 未知*/
 
 
-/* + - * / % */
+/* + - * / %
 15px - 5px // => 10px
 5 - 2 // => 3
 "foo " + "bar" // => "foo bar"
 "num " + 15 // => "num 15"
 5s / 2 // => 2.5s
 4 % 2 // => 0
+*/
 
 
-/* list ❌  */
+/* list
 length($list)
 nth($list, $n)
 join($list1, $list2, [$separator])
@@ -25,16 +26,20 @@ append($list1, $val, [$separator])
 zip($lists…)
 index($list, $value)
 list-separator(#list)
+*/
+
 
 /* range ❌  */
 
-/* hashes (map) ❌  */
+/* hashes (map)
 $map: (foo: #333, key2: #666);
 a {
     map-get($map, foo);
 }
+*/
 
-/* hashes extend ❌  */
+
+/* hashes extend
 $map1: (
   foo: tmp1
   bar: tmp2
@@ -48,9 +53,12 @@ map-values($map1) // => tmp1, tmp2
 map-has-key($map1, foo) // => true
 map-merge($map1, $map2) // => (foo: tmp1, bar: tmp2, baz: tmp3)
 map-remove($map1, foo, bar) // => ()
+*/
 
-/* in operator */
+
+/* in operator
 map-has-key($map1, foo) // => true
+*/
 
 /* instance check 'is a' ❌  */
 

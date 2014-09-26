@@ -1,20 +1,21 @@
-/* operators precedence 运算符优先级*/
-// .
-// []
-// ! ~ + -
-// is defined
-// ** * / %
-// + -
-// ... ..
-// <= >= < >
-// in
-// == is != is not isnt
-// is a
-// && and || or
-// ?:
-// = := ?= += -= *= /= %=
-// not
-// if unless
+/* operators precedence 运算符优先级
+.
+[]
+! ~ + -
+is defined
+** * / %
++ -
+... ..
+<= >= < >
+in
+== is != is not isnt
+is a
+&& and || or
+?:
+= := ?= += -= *= /= %=
+not
+if unless
+*/
 
 
 /* operators precedence demo */
@@ -69,21 +70,22 @@ list[-1] // => 3
 5..1 // => 5 4 3 2 1
 
 
-/* hashes */
+/* hashes
 foo = { width: 10px, height: 20px }
 for key, value in foo
-  {key}: value
-// => width: 10px;
-//    height: 20px;
+    {key}: value
+=> width: 10px;
+   height: 20px;
+*/
 
 
-/* hashes extend (alias merge) ❤️  */
+/* hashes extend (alias merge) ❤️
 obj = {
-  foo: 'tmp1'
-  bar: 'tmp2'
+    foo: 'tmp1'
+    bar: 'tmp2'
 }
 obj2 = {
-  baz: 'tmp3'
+    baz: 'tmp3'
 }
 obj.foo // => 'tmp1'
 obj['foo'] // => 'tmp1'
@@ -91,50 +93,51 @@ length(obj) // => 2
 keys(foo) // => 'foo' 'bar'
 values(foo) // => 'tmp1' 'tmp2'
 extend(obj, obj2) // => {"foo":"('tmp1')","bar":"('tmp2')","baz":"('tmp3')"}
+*/
 
 
-/* in operator ❤️  */
+/* in operator ❤️
 words = foo bar baz
 bar in words // => true
 HEY in words // => false
+*/
 
 
-/* instance check 'is a' */
+/* instance check 'is a'
 15 is a 'unit' // => true
 #fff is a 'rgba' // => true
 15 is a 'rgba' // => false
 type(#fff) == 'rgba' // => true
+*/
 
 
 /* variable definition */
-foo is defined // => false
-foo = 15px
-foo is defined // => true
+// foo is defined // => false
+// foo = 15px
+// foo is defined // => true
 
 
-/* conditional assignment ❤️  */
+/* conditional assignment ❤️
 color := white
 color ?= white
 color = color is defined ? color : white
-// 三句等同
+三句等同
+*/
 
 
-/* ternary expression */
+/* ternary expression
 num = 15
 num ? unit(num, 'px') : 20px // => 15px
+*/
 
 
 /* exponent */
-2 ** 8 // => 256
+// 2 ** 8 // => 256
 
 
-/* color operation ❤️  */
+/* color operation ❤️
 #0e0 + #0e0 // => #0f0
 #888 + 50% // => #c3c3c3
 #888 - 50% // => #444
 #f00 + 50deg // => #ffd500
-
-
-/* sprintf */
-'-webkit-gradient(%s, %s, %s)' % (linear (0 0) (0 100%))
-// => -webkit-gradient(linear, 0 0, 0 100%)
+*/
